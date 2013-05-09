@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Clynx2</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	
+  <div class="container">
+  	<div class="navbar navbar-fixed-top">
+	  <div class="navbar-inner">
+	    <a class="brand" href="#">C-Lynx</a>
+	    <ul class="nav">
+	      <li><%= link_to "Project Activity", feed_path %></li>
+	      <li class="divider-vertical"></li>
+	      <li><a href="#">Link</a></li>
+	      <li class="divider-vertical"></li>
+	      <li><a href="#">Link</a></li>
+	      <li class="divider-vertical"></li>
+	    </ul>
+	    
+	    <ul class="nav pull-right">
+	    	<% if user_signed_in? %>
+		    	<li><%= link_to current_user.full_name, edit_user_registration_path %></li>
+		    	<li><%= link_to "Log Out", logout_path %> </li>
+	    	
+		    <% else %>
+		    	<li><%= link_to "Register", register_path %></li>
+		    	<li><%= link_to "Log In", login_path %></li>
+
+	    	<% end %>
+	    
+	    </ul>
+	  </div>
+	</div>
+  	
+	<div class="container">
+		<% flash.each do |type, message| %>
+			<div class="alert <%=flash_class type %>">
+				<button class="close" data-dissmiss="alert"></button>
+				<%= message %>
+
+			</div>
+		<% end %>
+		
+
+	
+  	
+
+	<%= yield %>
+   
+  </div>
+
+
+
+
+
+</body>
+</html>

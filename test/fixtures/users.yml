@@ -1,0 +1,12 @@
+ryan:
+  fist_name: "Ryan"
+  last_name: "Flournoy"
+  company_name: "Construction lynx"
+  position_name: "CEO"
+  email: "ryanflournoy@yahoo.com"
+
+jim:
+  fist_name: "Jim"
+  last_name: "Hoskins"
+  position_name: "teacher"
+  email: "jim@teamtreehouse.com"

@@ -8,5 +8,13 @@ ryan:
 jim:
   fist_name: "Jim"
   last_name: "Hoskins"
+  company_name: "teamtreehouse"
   position_name: "teacher"
   email: "jim@teamtreehouse.com"
+
+mike:
+  fist_name: "Mike"
+  last_name: "The Frog"
+  company_name: "teamtreehouse"
+  position_name: "pawn"
+  email: "mike@teamtreehouse.com"

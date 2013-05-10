@@ -14,6 +14,8 @@ class User < ActiveRecord::Base
   validates :company_name, presence: true
 
   has_many :statuses
+  has_many :user_friendships
+  has_many :friends, through: :user_friendships
 
   def full_name
   	fist_name + " " + last_name
